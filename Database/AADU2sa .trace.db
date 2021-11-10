@@ -1,0 +1,42 @@
+2021-11-07 19:38:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "INSERT INTO ESTUDIANTES (NOMBRE, APELLIDO, MODULO) VALUES ('Oscar', 'Sanchez', 'IT'),('David', 'Antón', 'IT'),('Gonzalo', 'DelCodo', 'Jardineria'),('Ruben', 'Domingo', 'TAFAD')([*]'Javier', 'Iribas', 'ADE');"
+Syntax error in SQL statement "INSERT INTO ESTUDIANTES (NOMBRE, APELLIDO, MODULO) VALUES ('Oscar', 'Sanchez', 'IT'),('David', 'Antón', 'IT'),('Gonzalo', 'DelCodo', 'Jardineria'),('Ruben', 'Domingo', 'TAFAD')([*]'Javier', 'Iribas', 'ADE');"; SQL statement:
+INSERT INTO estudiantes (nombre, apellido, modulo) VALUES ('Oscar', 'Sanchez', 'IT'),('David', 'Antón', 'IT'),('Gonzalo', 'DelCodo', 'Jardineria'),('Ruben', 'Domingo', 'TAFAD')('Javier', 'Iribas', 'ADE'); [42000-200]
+2021-11-07 19:38:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "IT" no encontrada
+Column "IT" not found; SQL statement:
+UPDATE estudiantes SET modulo='Informatica' WHERE modulo=IT [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:191)
+	at org.h2.command.dml.Update.prepare(Update.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at com.aad.ejercicio1.CRUD.main(CRUD.java:46)
+2021-11-07 19:44:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "JAVIER" no encontrada
+Column "JAVIER" not found; SQL statement:
+DELETE FROM ESTUDIANTES WHERE id = Javier [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:191)
+	at org.h2.command.dml.Delete.prepare(Delete.java:184)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at com.aad.ejercicio1.CRUD.main(CRUD.java:48)

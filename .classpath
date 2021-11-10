@@ -8,16 +8,25 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
+			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-17"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/oskit/Downloads/mysql-connector-java-8.0.27/mysql-connector-java-8.0.27.jar"/>
+	<classpathentry kind="lib" path="C:/Users/oskit/Downloads/commons-pool2-2.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/oskit/Downloads/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/oskit/Downloads/commons-dbcp2-2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/oskit/Downloads/javacsv2.1/javacsv.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
